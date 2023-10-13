@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Pág imc</title>
+</head>
+
+<body>
+    <nav style="background-color:aquamarine !important;" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Calculadora de IMC</span>
+        </div>
+    </nav>
+    <h2 style="color: blue;">Calcule seu IMC abaixo:</h2>
+    <form action="{% url 'imc_gerado' %}" method="post">
+        {% csrf_token %}
+        <div style="text-align: center;">
+            Peso(*em KG)<input name="peso" class="form-control-sm" type="text">
+            Altura(*em Metros*)<input name="altura" class="form-control-sm" type="text">
+            <button class="form-control-sm" <a href="{% url 'imc_gerado'  %}">Calcular</button>
+        </div>
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>
